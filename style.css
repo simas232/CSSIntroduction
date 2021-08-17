@@ -162,3 +162,18 @@ a:link {
   text-decoration: none;
   font-size: 32px;
 }
+
+.article1 > p:last-child {
+  color: blue;
+  font-weight: bold;
+}
+
+.aside > ul > li:first-child {
+  color: yellow;
+}
+.aside > ul > li:nth-child(2) {
+  color: green;
+}
+.aside > ul > li:last-child {
+  color: red;
+}
