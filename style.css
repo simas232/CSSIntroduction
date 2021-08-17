@@ -4,14 +4,25 @@ html {
   margin-left: 1%;
   justify-content: center;
   font-family: sans-serif;
+
+  display: grid;
+  grid-template-areas:
+  'grid-container'
 }
 
-.grid-container {
+#index-container {
   display: grid;
   grid-template-areas:
     'header header'
-    'main asideBlock'
+    'main-index asideBlock'
     'footer footer';
+}
+#login-container {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'main-login'
+    'footer';
 }
 
 header {
@@ -43,13 +54,20 @@ header > a {
   background-color: lightblue;
 }
 
-main {
-  grid-area: main;
+#main-index {
   display: grid;
   grid-template-areas:
   'mainHeader .'
   'mainSubText .'
   'article1 article2';
+  background-color: yellow;
+  border: 2px solid black;
+}
+#main-login {
+  display: grid;
+  grid-template-areas:
+  'mainHeader'
+  'loginForm';
   background-color: yellow;
   border: 2px solid black;
 }
@@ -81,6 +99,36 @@ article > h3 {
 article > img {
   margin: auto;
   display: block;
+}
+#main-login > h2 {
+  text-transform: uppercase;
+}
+.loginForm {
+  grid-area: loginForm;
+  text-align: left;
+  border-radius: 10px;
+}
+#resetButton {
+  background-color: red;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 16px;
+}
+#submitButton {
+  background-color: green;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 16px;
 }
 
 .asideBlock {
