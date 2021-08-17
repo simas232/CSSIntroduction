@@ -1,0 +1,123 @@
+html {
+  width: 1024px;
+  margin-right: 1%;
+  margin-left: 1%;
+  justify-content: center;
+  font-family: sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header'
+    'main asideBlock'
+    'footer footer';
+}
+
+header {
+  grid-area: header;
+  background-color:orange;
+  display: grid;
+  grid-template-areas: 'siteName links links links rightnav';
+  align-items: center;
+  justify-items: left;
+  border-style: solid;
+  border-width: 2px;
+}
+
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-areas:
+  'mainHeader .'
+  'mainSubText .'
+  'article1 article2';
+  background-color: yellow;
+  border-style: solid;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+}
+
+main > * {
+  margin: 20px;
+  background-color: lightgrey;
+  border-style: solid;
+  border-width: 2px;
+  padding: 5px;
+}
+.mainHeader {
+  grid-area: mainHeader;
+  text-align: center;
+}
+.mainSubText {
+  grid-area: mainSubText;
+  text-align: justify;
+}
+.article1 {
+  grid-area: article1;
+  text-align: justify;
+}
+.article2 {
+  grid-area: article2;
+  text-align: justify;
+}
+article > h3 {
+  text-align: center;
+}
+article > img {
+  margin: auto;
+  display: block;
+}
+.asideBlock {
+  grid-area: asideBlock;
+  background-color: burlywood;
+  display: grid;
+  grid-template-areas: 'aside';
+  border-style: solid;
+  border-width: 2px;
+  grid-template-rows: auto minmax(0, 1fr);
+}
+.aside {
+  grid-area: aside;
+  background-color: lightgrey;
+  border-style: solid;
+  border-width: 2px;
+  text-align: left;
+  padding: 5px;
+  margin: 20px;
+}
+footer {
+  grid-area: footer;
+  background-color: purple;
+  text-align: center;
+}
+
+header > h1 {
+  grid-area: siteName;
+  border-style: solid;
+  border-width: 2px;
+}
+
+header > nav > ul > li {
+  grid-area: links;
+  list-style-type: none;
+  float: left;
+  padding: 12px;
+  background-color: rgb(98, 122, 201);
+  border-style: solid;
+  border-width: 2px;
+}
+
+header > a {
+  grid-area: rightnav;
+  border-style: solid;
+  border-width: 2px;
+  background-color: lightblue;
+}
+
+a:link {
+  color: black;
+  text-decoration: none;
+  font-size: 40px;
+}
